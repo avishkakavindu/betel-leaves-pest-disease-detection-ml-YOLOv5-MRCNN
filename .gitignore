@@ -1,0 +1,7 @@
+.idea
+venv/
+leaf_identification/saved_models/leaf_identification_model.h5
+pest_detection/yolov5/runs/
+disease_detection/mrcnn/__pycache__
+disease_detection/mask_rcnn_coco.h5
+pest_detection/yolov5/__pycache__
