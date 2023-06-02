@@ -5,3 +5,4 @@ pest_detection/yolov5/runs/
 disease_detection/mrcnn/__pycache__
 disease_detection/mask_rcnn_coco.h5
 pest_detection/yolov5/__pycache__
+/pest_detection/detections/
