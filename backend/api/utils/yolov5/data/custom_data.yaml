@@ -1,0 +1,7 @@
+path: ../../datasets/pests
+train: train
+val: test
+names:
+  0: mealybug
+  1: whitefly
+nc: 2
