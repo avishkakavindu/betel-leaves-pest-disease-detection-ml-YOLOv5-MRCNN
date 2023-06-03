@@ -232,7 +232,7 @@ def run(
     if update:
         strip_optimizer(weights[0])  # update model (to fix SourceChangeWarning)
 
-    return results
+    return results, save_path
 
 
 

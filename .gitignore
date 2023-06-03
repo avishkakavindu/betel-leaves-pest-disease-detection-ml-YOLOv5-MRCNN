@@ -8,3 +8,4 @@ pest_detection/yolov5/__pycache__
 /pest_detection/detections/
 /pest_detection/yolov5/models/__pycache__
 /backend/db.sqlite3
+/backend/media/
