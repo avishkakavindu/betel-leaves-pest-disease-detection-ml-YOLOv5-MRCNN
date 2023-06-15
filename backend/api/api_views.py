@@ -11,6 +11,7 @@ from rest_framework.response import Response
 from rest_framework import status
 
 from .models import Cure
+from .serializers import CureSerializer
 
 from .utils import mrcnn_predictor, yolov5_predictor, betel_leaf_predictor
 
@@ -46,9 +47,14 @@ class DetectBetelDiseasesAPIView(APIView):
         cures = {}
         for disease in pred_to_text:
             try:
-                cures[disease] = Cure.objects.get(disease_or_pest=disease, type=Cure.DISEASE).cure_description
+                cure = Cure.objects.get(disease_or_pest=disease, type=Cure.DISEASE)
+                serializer = CureSerializer(cure)
+                cures[disease] = serializer.data
             except Cure.DoesNotExist:
-                cures[disease] = 'Cure not found in database'
+                cures[disease] = {
+                    'disease': 'Cure not found in database',
+                    'disease_description': 'Not found in database'
+                }
 
         context = {
             'image_url': image_url,
@@ -102,9 +108,14 @@ class DetectBetelPestAPIView(APIView):
         cures = {}
         for pest in preds.keys():
             try:
-                cures[pest] = Cure.objects.get(disease_or_pest=pest, type=Cure.PEST).cure_description
+                cure = Cure.objects.get(disease_or_pest=pest, type=Cure.PEST)
+                serializer = CureSerializer(cure)
+                cures[pest] = serializer.data
             except Cure.DoesNotExist:
-                cures[pest] = 'Cure not found in database'
+                cures[pest] = {
+                    'pest': 'Cure not found in database',
+                    'disease_description': 'Not found in database'
+                }
 
         context = {
             'predictions': preds,

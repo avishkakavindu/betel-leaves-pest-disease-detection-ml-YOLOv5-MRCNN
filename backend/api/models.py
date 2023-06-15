@@ -32,6 +32,7 @@ class Cure(models.Model):
     ]
 
     disease_or_pest = models.CharField(max_length=255, choices=DISEASE_CHOICES)
+    disease_description = models.TextField()
     cure_description = models.TextField()
     type = models.CharField(max_length=20, choices=TYPE, default=DISEASE)
 
