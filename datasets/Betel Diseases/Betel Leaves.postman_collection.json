@@ -1,0 +1,343 @@
+{
+	"info": {
+		"_postman_id": "a23def4b-a174-44e0-b6c8-4bd8412477d2",
+		"name": "Betel Leaves",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13401059"
+	},
+	"item": [
+		{
+			"name": "Betel Disease Detection",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/ACER/Documents/My mini Projects/ML/Betel Leaves/datasets/Betel Diseases/20230409_170752114.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/betel-disease",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"betel-disease"
+					]
+				},
+				"description": "Get Betel Leaves disease detection using image.\n\nRequired properties: (\\`form data\\`)\n\n`image` : disease containing image"
+			},
+			"response": [
+				{
+					"name": "Betel Disease Detection",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/ACER/Documents/My mini Projects/ML/Betel Leaves/datasets/Betel Diseases/20230409_170752114.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/betel-disease",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"betel-disease"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 15 Jun 2023 17:00:45 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "868"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"image_url\": \"http://127.0.0.1:8000/media/disease_detection/temp_image_6ApcGNU.jpg\",\n    \"predictions\": [\n        \"stem_disease\",\n        \"bacterial_leaf_blight\",\n        \"leaf_spot\"\n    ],\n    \"cures\": {\n        \"stem_disease\": {\n            \"id\": 3,\n            \"disease_or_pest\": \"stem_disease\",\n            \"disease_or_pest_display\": \"Stem Disease\",\n            \"disease_description\": \"Disease description\",\n            \"cure_description\": \"Cure for Stem Disease\",\n            \"type\": \"disease\",\n            \"type_display\": \"Disease\"\n        },\n        \"bacterial_leaf_blight\": {\n            \"id\": 1,\n            \"disease_or_pest\": \"bacterial_leaf_blight\",\n            \"disease_or_pest_display\": \"Bacteria Leaf Blight\",\n            \"disease_description\": \"Disease description\",\n            \"cure_description\": \"Bacteria leaf blight cure\",\n            \"type\": \"disease\",\n            \"type_display\": \"Disease\"\n        },\n        \"leaf_spot\": {\n            \"id\": 2,\n            \"disease_or_pest\": \"leaf_spot\",\n            \"disease_or_pest_display\": \"Leaf Spot\",\n            \"disease_description\": \"Disease description\",\n            \"cure_description\": \"Cure for Leaf Spot disease\",\n            \"type\": \"disease\",\n            \"type_display\": \"Disease\"\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Betel Leaf Identification",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/ACER/Documents/My mini Projects/ML/Banana Disease Prediction/disease_detection_mrcnn/dataset/1.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/betel-leaf",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"betel-leaf"
+					]
+				},
+				"description": "Get Betel Leaves variety using image.\n\nRequired properties: (\\`form data\\`)\n\n`image` :image"
+			},
+			"response": [
+				{
+					"name": "Betel Leaf Identification",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/ACER/Documents/My mini Projects/ML/Betel Leaves/datasets/Betel classification/Maneru/4 - Copy (2).jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/betel-leaf",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"betel-leaf"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 03 Jun 2023 10:23:53 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "91"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"prediction\": \"Maneru\",\n        \"probability\": 100\n    },\n    {\n        \"prediction\": \"Naagawalli\",\n        \"probability\": 0\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Betel Pest Detection",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/betel-pest",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"betel-pest"
+					]
+				},
+				"description": "Detect pests in a Betel Leave by image.(\\`form data\\`)\n\n`image`: image of pest infested leaf"
+			},
+			"response": [
+				{
+					"name": "Betel Pest Detection",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/ACER/Documents/My mini Projects/ML/Betel Leaves/datasets/pests/train/images/download.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/betel-pest",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"betel-pest"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 15 Jun 2023 17:00:21 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.7.0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, origin, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "395"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"predictions\": {\n        \"whitefly\": {\n            \"number_of_detections\": 2,\n            \"average_confidence\": 0.6207888722419739\n        }\n    },\n    \"image_url\": \"http://127.0.0.1:8000/media/pest_detection%5Ctemp_image_6UxYzqx.jpg\",\n    \"cures\": {\n        \"whitefly\": {\n            \"id\": 5,\n            \"disease_or_pest\": \"whitefly\",\n            \"disease_or_pest_display\": \"White Fly\",\n            \"disease_description\": \"Disease description\",\n            \"cure_description\": \"Cure for  White Fly\",\n            \"type\": \"pest\",\n            \"type_display\": \"Pest\"\n        }\n    }\n}"
+				}
+			]
+		}
+	]
+}
